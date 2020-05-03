@@ -97,6 +97,7 @@ header{
             padding: 15px 0;
             border-top: 1px solid rgba(0, 0, 0, 0.24);
             a{
+                color: black;
                 display: block;
                 padding-left: 30px;
                 width: 90%;
@@ -163,6 +164,89 @@ footer{
         height: 35px;
         &:hover{
             opacity: 1;
+        }
+    }
+}
+
+.top-photo{
+    position: relative;
+    height: max-content;
+    img{
+        height: 50%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    span{
+        position: absolute;
+        bottom: 20px;
+        left: 40px;
+        color: white;
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+}
+.shoes{
+    .shoes-container{
+        width: 90%;
+        max-width: 1300px;
+        margin: 100px auto;
+        h2{
+            font-size: 2.5rem;
+            margin: 10px 0;
+        }
+    }
+    .shoes-grid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: max-content;
+        row-gap: 20px;
+        column-gap: 20px;
+        @include tablet(){
+            grid-template-columns: 1fr 1fr;
+        }
+        .item{
+            display: flex;
+            flex-direction: column;
+            img{
+                width: 100%;
+            }
+            a{
+                color: rgb(71, 71, 71);
+                margin: 5px 0;
+            }
+        }
+    }
+}
+.top{
+    .top-container{
+        width: 90%;
+        max-width: 1300px;
+        margin: 100px auto;
+        h2{
+            font-size: 2.5rem;
+            margin: 10px 0;
+        }
+    }
+    .top-grid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: max-content;
+        row-gap: 20px;
+        column-gap: 20px;
+        @include tablet(){
+            grid-template-columns: 1fr 1fr;
+        }
+        .top-item{
+            display: flex;
+            flex-direction: column;
+            img{
+                width: 100%;
+            }
+            a{
+                color: rgb(71, 71, 71);
+                margin: 5px 0;
+            }
         }
     }
 }
