@@ -587,6 +587,7 @@ footer img:hover {
   width: max-content;
   -webkit-transition: 1s;
   transition: 1s;
+  margin-bottom: 50px;
 }
 
 .trending .carousel .carousel-container .product {
