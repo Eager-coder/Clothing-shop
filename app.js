@@ -7,10 +7,22 @@ function openNav(){
 }
 burgerButton.addEventListener('click', openNav);
 
-// Trending carousel
-const carousel = document.querySelector('.carousel');
-const carouselWidth = carousel.clientWidth;
-const prevBtn = document.querySelector("#prev");
-const nextBtn = document.querySelector("#next");
-nextBtn.addEventListener('click', ()=> carousel.scrollLeft += carouselWidth);
-prevBtn.addEventListener('click', ()=> carousel.scrollLeft -= carouselWidth);
+// Search field
+const searchBtn = document.querySelector('#search-btn');
+const searchField = document.querySelector('.search-field-mobile');
+const searchCloseBtn = document.querySelector('#search-close-btn');
+searchBtn.addEventListener('click', ()=>{
+    if (window.innerWidth < 480){
+        console.log('heool');
+        searchField.classList.add('search-field-active');
+    }
+})
+searchField.addEventListener('click', (e)=>{
+    if(e.target.id == 'search-btn' ||  e.target.tagName == 'INPUT'){
+    }   
+    else{
+        searchField.classList.remove('search-field-active')
+    }
+})
+
+

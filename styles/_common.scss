@@ -67,14 +67,44 @@ header{
                 @include tablet(){
                     font-size: 1.2rem;
                 }
+                @include mobile(){
+                    font-size: 1.1rem;
+                }
             }
         }
         .nav-buttons{
             display: flex;
+            .search-field{
+                display: flex;
+                max-width: 200px;
+                border: 1px solid black;
+                margin: 0 7px;
+                padding: 4px;
+                @include mobile(){
+                    border: none;
+                    padding: 0;
+                }
+                input[type=text]{
+                    width: calc(100% - 30px);
+                    border: none;
+                    padding-left: 10px;
+                    @include mobile(){
+                        display: none;
+                    }
+                }
+                #search-btn{
+                    cursor: pointer;
+                    @include mobile(){
+                        display: block;
+                        z-index: 2;
+                    }
+                }
+            }
             img{
                 width: 25px;
                 margin: 0 7px;
             }
+            
             #menu-btn{
                 display: none;
                 cursor: pointer;
@@ -110,6 +140,49 @@ header{
     }
     .nav-links-active{
         max-height: 410px;
+    }
+    .search-field-mobile{
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow-y: hidden;
+        top: 0;
+        bottom: 0;
+        z-index: 2;
+        background-color: white;
+        .search-field-mobile-container{
+            display: flex;
+            width: 100%;
+            margin: 20px auto;
+            position: relative;
+            align-items: center;
+            z-index: 3;
+            input{
+                width: 100%;
+                height: 25px;
+                border: none;
+                padding-left: 50px;
+            }
+            span{
+                cursor: pointer;
+                position: absolute;
+                top: 0px ;
+                font-size: 1.2rem;
+                right: 20px;
+            }
+            #search-btn{
+                cursor: pointer;
+                position: absolute;
+                top: 0px;
+                left: 10px;
+                display: block;
+                width: 25px;
+            }
+        }
+    }
+    .search-field-active{
+        display: block;
     }
 }
 footer{
@@ -172,7 +245,7 @@ footer{
     position: relative;
     height: max-content;
     img{
-        height: 50%;
+        height: 50vh;
         width: 100%;
         object-fit: cover;
         object-position: center;
@@ -199,7 +272,6 @@ footer{
     .shoes-grid{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: max-content;
         row-gap: 20px;
         column-gap: 20px;
         @include tablet(){
@@ -208,8 +280,12 @@ footer{
         .item{
             display: flex;
             flex-direction: column;
-            img{
+            width: 100%;
+            
+                img{
                 width: 100%;
+                height: auto;
+                
             }
             a{
                 color: rgb(71, 71, 71);
@@ -242,6 +318,7 @@ footer{
             flex-direction: column;
             img{
                 width: 100%;
+                height: auto;
             }
             a{
                 color: rgb(71, 71, 71);

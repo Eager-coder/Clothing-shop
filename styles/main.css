@@ -84,10 +84,56 @@ header nav .logo a span {
   }
 }
 
+@media screen and (max-width: 480px) {
+  header nav .logo a {
+    font-size: 1.1rem;
+  }
+}
+
 header nav .nav-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+header nav .nav-buttons .search-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 200px;
+  border: 1px solid black;
+  margin: 0 7px;
+  padding: 4px;
+}
+
+@media screen and (max-width: 480px) {
+  header nav .nav-buttons .search-field {
+    border: none;
+    padding: 0;
+  }
+}
+
+header nav .nav-buttons .search-field input[type=text] {
+  width: calc(100% - 30px);
+  border: none;
+  padding-left: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  header nav .nav-buttons .search-field input[type=text] {
+    display: none;
+  }
+}
+
+header nav .nav-buttons .search-field #search-btn {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  header nav .nav-buttons .search-field #search-btn {
+    display: block;
+    z-index: 2;
+  }
 }
 
 header nav .nav-buttons img {
@@ -143,6 +189,59 @@ header .nav-links-mobile li a {
 
 header .nav-links-active {
   max-height: 410px;
+}
+
+header .search-field-mobile {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow-y: hidden;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: white;
+}
+
+header .search-field-mobile .search-field-mobile-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 20px auto;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 3;
+}
+
+header .search-field-mobile .search-field-mobile-container input {
+  width: 100%;
+  height: 25px;
+  border: none;
+  padding-left: 50px;
+}
+
+header .search-field-mobile .search-field-mobile-container span {
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  font-size: 1.2rem;
+  right: 20px;
+}
+
+header .search-field-mobile .search-field-mobile-container #search-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  display: block;
+  width: 25px;
+}
+
+header .search-field-active {
+  display: block;
 }
 
 footer {
@@ -229,7 +328,7 @@ footer img:hover {
 }
 
 .top-photo img {
-  height: 50%;
+  height: 50vh;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -262,9 +361,6 @@ footer img:hover {
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: max-content;
-      grid-template-rows: -webkit-max-content;
-      grid-template-rows: max-content;
   row-gap: 20px;
   -webkit-column-gap: 20px;
           column-gap: 20px;
@@ -285,10 +381,12 @@ footer img:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
 }
 
 .shoes .shoes-grid .item img {
   width: 100%;
+  height: auto;
 }
 
 .shoes .shoes-grid .item a {
@@ -339,6 +437,7 @@ footer img:hover {
 
 .top .top-grid .top-item img {
   width: 100%;
+  height: auto;
 }
 
 .top .top-grid .top-item a {
@@ -649,7 +748,7 @@ footer img:hover {
   font-size: 1.8rem;
   font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
-  width: 400px;
+  max-width: 400px;
 }
 
 @media screen and (max-width: 480px) {
