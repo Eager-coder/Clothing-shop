@@ -539,6 +539,7 @@ footer img:hover {
 
 .mission {
   background-color: black;
+  position: relative;
 }
 
 .mission img {
@@ -567,12 +568,6 @@ footer img:hover {
   width: 600px;
   text-transform: uppercase;
   color: white;
-}
-
-@media screen and (max-width: 480px) {
-  .mission .mission-text {
-    top: 30%;
-  }
 }
 
 @media screen and (max-width: 770px) {
@@ -650,6 +645,33 @@ main .management {
   width: 100%;
   padding: 0 20px;
   margin: 0 auto;
+}
+
+main .management h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #bb0303;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #bb0303;
+  margin: 50px 0 50px 100px;
+  width: 500px;
+}
+
+@media screen and (max-width: 770px) {
+  main .management h2 {
+    font-size: 1.5rem;
+    width: 400px;
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main .management h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: 250px;
+  }
 }
 
 main .management .flex-container {
