@@ -48,6 +48,133 @@
             }
         }
        
-        
     }
+}
+main{
+    margin: 0 auto;
+    .history{
+        margin: 200px auto;
+        width: 100%;
+        max-width: 1000px;
+        height: max-content;
+        padding: 0 20px;
+        @include tablet(){
+            margin: 100px 0;
+        }
+        h2{
+            font-size: 3.5rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-family: 'Oswald', sans-serif;
+        }
+        p{
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: rgb(53, 53, 53);
+        }
+    }
+    .management{
+        width: 100%;
+        padding: 0 20px;
+        margin: 0 auto;
+        .flex-container{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            @include laptop(){
+                flex-direction: column;
+            }
+            .flex-item{
+                width: 31vw; 
+                position: relative;
+                @include laptop(){
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                &::after{
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0; bottom: 0; right: 0; left: 0;
+                    background: radial-gradient( transparent 50%, black 150%);
+                }
+                .member-img{
+                    width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .member-info{
+                    position: absolute;
+                    z-index: 1;
+                    bottom: 20px;
+                    left: 20px ;
+                    span{
+                        display: block;
+                        color: white;
+                        text-transform: uppercase;
+                    }
+                    .name{
+                        font-weight: 600;
+                    }
+                    .position{
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+    .figures{
+        width: 100%;
+        max-width: 1340px;
+        margin: 200px auto;
+        padding: 0 20px;
+        @include tablet(){
+            margin: 100px auto;
+        }
+        h2{
+            font-size: 3rem;
+            color: rgb(17, 17, 17);
+            text-transform: uppercase;
+            margin: 30px 0;
+            @include mobile(){
+                font-size: 2rem;
+            }
+        }
+        .figures-flex{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            @include laptop(){
+                flex-wrap: wrap;
+            }
+            .figure{
+                margin-bottom: 30px;
+                .figure-text{
+                    width: 200px;
+
+                }
+                @include laptop(){
+                    width: 50%;
+                }
+                @include tablet(){
+                    width: 100%;
+                }
+            }
+            h3{
+                font-size: 3.5rem;
+                font-weight: 900;
+                color: rgb(53, 53, 53);
+            }
+            span{
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                color: rgb(2, 2, 2);
+                font-weight: 700;
+            }
+        }
+
+    }
+   
 }

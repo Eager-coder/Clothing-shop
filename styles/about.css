@@ -612,4 +612,191 @@ footer img:hover {
     font-size: 2.5rem;
   }
 }
+
+main {
+  margin: 0 auto;
+}
+
+main .history {
+  margin: 200px auto;
+  width: 100%;
+  max-width: 1000px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 770px) {
+  main .history {
+    margin: 100px 0;
+  }
+}
+
+main .history h2 {
+  font-size: 3.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+}
+
+main .history p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #353535;
+}
+
+main .management {
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+main .management .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  main .management .flex-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+main .management .flex-container .flex-item {
+  width: 31vw;
+  position: relative;
+}
+
+@media screen and (max-width: 1000px) {
+  main .management .flex-container .flex-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+main .management .flex-container .flex-item::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: radial-gradient(transparent 50%, black 150%);
+}
+
+main .management .flex-container .flex-item .member-img {
+  width: 100%;
+}
+
+main .management .flex-container .flex-item .member-img img {
+  width: 100%;
+}
+
+main .management .flex-container .flex-item .member-info {
+  position: absolute;
+  z-index: 1;
+  bottom: 20px;
+  left: 20px;
+}
+
+main .management .flex-container .flex-item .member-info span {
+  display: block;
+  color: white;
+  text-transform: uppercase;
+}
+
+main .management .flex-container .flex-item .member-info .name {
+  font-weight: 600;
+}
+
+main .management .flex-container .flex-item .member-info .position {
+  font-weight: 300;
+}
+
+main .figures {
+  width: 100%;
+  max-width: 1340px;
+  margin: 200px auto;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 770px) {
+  main .figures {
+    margin: 100px auto;
+  }
+}
+
+main .figures h2 {
+  font-size: 3rem;
+  color: #111111;
+  text-transform: uppercase;
+  margin: 30px 0;
+}
+
+@media screen and (max-width: 480px) {
+  main .figures h2 {
+    font-size: 2rem;
+  }
+}
+
+main .figures .figures-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  main .figures .figures-flex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+main .figures .figures-flex .figure {
+  margin-bottom: 30px;
+}
+
+main .figures .figures-flex .figure .figure-text {
+  width: 200px;
+}
+
+@media screen and (max-width: 1000px) {
+  main .figures .figures-flex .figure {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  main .figures .figures-flex .figure {
+    width: 100%;
+  }
+}
+
+main .figures .figures-flex h3 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #353535;
+}
+
+main .figures .figures-flex span {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #020202;
+  font-weight: 700;
+}
 /*# sourceMappingURL=about.css.map */
