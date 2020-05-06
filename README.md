@@ -1,2 +1,2 @@
 # Clothing-shop
-This is a clithing shop made by me
+This is a clothing shop made by me
