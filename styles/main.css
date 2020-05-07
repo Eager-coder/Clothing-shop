@@ -513,7 +513,6 @@ footer img:hover {
   border: none;
   color: white;
   font-size: 1.2rem;
-  border-radius: 4px;
 }
 
 @media screen and (max-width: 480px) {
@@ -529,12 +528,24 @@ footer img:hover {
   background-color: black;
   border: none;
   border-left: 1px white solid;
-  border-radius: 4px;
-  color: lightgray;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.sign-up .sign-up-flex div button::after {
+  content: ' \2192';
+  color: whitesmoke;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .sign-up .sign-up-flex div button:hover {
-  color: white;
+  color: black;
+  background-color: whitesmoke;
+}
+
+.sign-up .sign-up-flex div button:hover::after {
+  color: black;
 }
 
 .hero-container {
@@ -801,96 +812,5 @@ footer img:hover {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
-}
-
-.sign-up {
-  margin: 100px 0;
-  padding: 50px 0;
-  background-color: #ede734;
-}
-
-.sign-up .sign-up-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media screen and (max-width: 770px) {
-  .sign-up .sign-up-flex {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-}
-
-.sign-up .sign-up-flex h4 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  font-family: Arial, Helvetica, sans-serif;
-  max-width: 400px;
-}
-
-@media screen and (max-width: 480px) {
-  .sign-up .sign-up-flex h4 {
-    font-size: 1.5rem;
-  }
-}
-
-.sign-up .sign-up-flex div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media screen and (max-width: 770px) {
-  .sign-up .sign-up-flex div {
-    margin-top: 20px;
-  }
-}
-
-.sign-up .sign-up-flex div input[type=text] {
-  width: 300px;
-  height: 40px;
-  background-color: black;
-  padding-left: 10px;
-  border: none;
-  color: white;
-  font-size: 1.2rem;
-  border-radius: 4px;
-}
-
-@media screen and (max-width: 480px) {
-  .sign-up .sign-up-flex div input[type=text] {
-    width: 200px;
-  }
-}
-
-.sign-up .sign-up-flex div button {
-  cursor: pointer;
-  width: 50px;
-  height: 40px;
-  background-color: black;
-  border: none;
-  border-left: 1px white solid;
-  border-radius: 4px;
-  color: lightgray;
-}
-
-.sign-up .sign-up-flex div button:hover {
-  color: white;
 }
 /*# sourceMappingURL=main.css.map */

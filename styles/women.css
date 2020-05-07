@@ -513,7 +513,6 @@ footer img:hover {
   border: none;
   color: white;
   font-size: 1.2rem;
-  border-radius: 4px;
 }
 
 @media screen and (max-width: 480px) {
@@ -529,11 +528,23 @@ footer img:hover {
   background-color: black;
   border: none;
   border-left: 1px white solid;
-  border-radius: 4px;
-  color: lightgray;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.sign-up .sign-up-flex div button::after {
+  content: ' \2192';
+  color: whitesmoke;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .sign-up .sign-up-flex div button:hover {
-  color: white;
+  color: black;
+  background-color: whitesmoke;
+}
+
+.sign-up .sign-up-flex div button:hover::after {
+  color: black;
 }
 /*# sourceMappingURL=women.css.map */
