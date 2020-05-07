@@ -549,8 +549,13 @@ footer img:hover {
 }
 
 main {
-  padding: 0 20px;
+  padding: 0 30px;
   width: 100%;
+}
+
+main h1 {
+  margin-bottom: 30px;
+  font-size: 3.5rem;
 }
 
 main .hero {
@@ -625,5 +630,64 @@ main .hero .hero-text p {
   main .hero .hero-text p {
     display: none;
   }
+}
+
+main .pro-tips {
+  margin: 100px auto;
+}
+
+main .pro-tips .tips-container {
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .pro-tips .tips-container .tip {
+  width: 30vw;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: 0 5px;
+}
+
+main .pro-tips .tips-container .tip img {
+  width: 100%;
+  height: 25vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+main .pro-tips .tips-container .tip img:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+main .pro-tips .tips-container .tip .tag {
+  margin-top: 10px;
+  display: inline-block;
+  padding-bottom: 5px;
+  border-bottom: black 4px solid;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+main .pro-tips .tips-container .tip .title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+main .pro-tips .tips-container .tip p {
+  font-size: .9rem;
 }
 /*# sourceMappingURL=blog.css.map */

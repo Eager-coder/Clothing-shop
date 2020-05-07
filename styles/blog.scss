@@ -1,6 +1,10 @@
 @import 'common';
 main{
-    padding: 0 20px;
+    h1{
+        margin-bottom: 30px;
+        font-size: 3.5rem;
+    }
+    padding: 0 30px;
     width: 100%;
     .hero{
         display: flex;
@@ -50,6 +54,50 @@ main{
             }
         }
         
+    }
+    .pro-tips{
+        margin: 100px auto;
+
+        .tips-container{
+            width: 100%;
+            margin: 0 auto;
+            
+            display: flex;
+            justify-content: space-between;
+            .tip{
+                width: 30vw;
+                height: max-content;
+                margin: 0 5px;
+                img{
+                    width: 100%;
+                    height: 25vw;
+                    object-fit: cover;
+                    object-position: top;
+                    transition: 0.3s;
+                    &:hover{
+                        transform: scale(1.02);
+                    }
+                }
+                .tag{
+                    margin-top: 10px;
+                    display: inline-block;
+                    padding-bottom: 5px;
+                    border-bottom: black 4px solid;
+                    text-transform: uppercase;
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                }
+                .title{
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    margin: 10px 0;
+                }
+                p{
+                    font-size: .9rem;
+
+                }
+            }
+        }
     }
 
 }
