@@ -1,0 +1,50 @@
+@import 'common';
+main{
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    min-height: 70vh;
+    h1{
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 500;
+        @include mobile(){
+            font-size: 1.8rem;
+        }
+    }
+    .empty{
+        margin-top: 100px;
+        text-align: center;
+        p{
+            color: grey;
+            margin-bottom: 20px;
+        }
+        a{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            font-size: 1rem;
+            padding: 5px 30px 5px 10px;
+            
+            transition: 0.3s;
+            border-radius: 3px;
+            border: white 2px solid;
+            &:hover{
+                border: black 2px solid;
+                background-color: black;
+                color: white;
+            }
+            &:hover img{
+                filter: invert(1);
+                transform: translateX(20px);
+            }
+            img{
+                height: 15px;
+                margin-left: 10px;
+                transition: 0.3s;
+            }
+        }
+    }
+}
