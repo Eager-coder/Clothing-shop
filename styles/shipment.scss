@@ -1,0 +1,45 @@
+@import 'common';
+main{
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 20px;
+    margin: 0 auto;
+    .shipment-info{
+        margin-bottom: 80px;
+    }
+    h1{
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+    h3{
+        font-size: 1rem;
+        font-weight: 400;
+        color: rgb(48, 48, 48);
+        margin-bottom: 80px;
+    }
+    h2{
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: rgb(48, 48, 48);
+        margin-bottom: 30px;
+    }
+    p{
+        color: rgb(68, 68, 68);
+        margin: 20px 0;
+        font-weight: 400;
+        a{
+            text-decoration: underline;
+        }
+    }
+    ul{
+        margin-bottom: 50px;
+        li{
+            list-style: initial;
+            margin: 10px 0 10px 50px;
+            color: rgb(68, 68, 68);
+        }
+    }
+
+}
