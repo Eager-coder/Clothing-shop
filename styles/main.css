@@ -362,7 +362,7 @@ footer img:hover {
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  row-gap: 20px;
+  row-gap: 100px;
   -webkit-column-gap: 20px;
           column-gap: 20px;
 }
@@ -374,7 +374,7 @@ footer img:hover {
   }
 }
 
-.shoes .shoes-grid .item {
+.shoes .shoes-grid .item-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -382,17 +382,39 @@ footer img:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
 }
 
-.shoes .shoes-grid .item img {
+.shoes .shoes-grid .item-container img {
   width: 100%;
   height: auto;
 }
 
-.shoes .shoes-grid .item a {
-  color: #474747;
-  margin: 5px 0;
+.shoes .shoes-grid .item-container .item-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px 0;
+}
+
+.shoes .shoes-grid .item-container .item-info .item-price {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.shoes .shoes-grid .item-container button {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  width: 100px;
+  height: 30px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
 }
 
 .top .top-container {

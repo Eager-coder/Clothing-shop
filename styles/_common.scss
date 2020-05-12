@@ -278,24 +278,39 @@ footer{
     .shoes-grid{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        row-gap: 20px;
+        row-gap: 100px;
         column-gap: 20px;
         @include tablet(){
             grid-template-columns: 1fr 1fr;
         }
-        .item{
+        .item-container{
             display: flex;
             flex-direction: column;
-            width: 100%;
             
-                img{
-                width: 100%;
-                height: auto;
+            
+            img{
+            width: 100%;
+            height: auto;
                 
             }
-            a{
-                color: rgb(71, 71, 71);
-                margin: 5px 0;
+            .item-info{
+                display: flex;
+                justify-content: space-between;
+                margin: 10px 0;
+                .item-price{
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                }
+            }
+            button{
+                align-self: end;
+                width: 100px;
+                height: 30px;
+                background-color: black;
+                color: white;
+                cursor: pointer;
+                border: none;
+                border-radius: 5px;
             }
         }
     }

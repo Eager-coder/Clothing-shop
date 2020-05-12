@@ -13,6 +13,7 @@ main{
             font-size: 1.8rem;
         }
     }
+
     .empty{
         margin-top: 100px;
         text-align: center;
@@ -44,6 +45,34 @@ main{
                 height: 15px;
                 margin-left: 10px;
                 transition: 0.3s;
+            }
+        }
+    }
+    .cart-container{
+        width: 100%;
+        .item{
+            margin: 10px 0;
+            border: 1px black solid;
+            padding: 2px;
+            max-width: 700px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            img{
+                width: 200px;
+            }
+            div{
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin: 10px;
+            }
+            .item-button{
+                cursor: pointer;
+                width: 20px;
+                height: 20px;
+                &:after {
+                    content: ' \2716';
+                }
             }
         }
     }
