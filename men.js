@@ -30,10 +30,10 @@ const itemGenerator = function(element){
     itemBtn.innerHTML = 'Add to cart';
     itemContainer.appendChild(itemInfo);
     itemContainer.appendChild(itemBtn);
-    if (itemBtn.dataset.id < 7){
+    if (itemBtn.dataset.id < 9){
         shoesGrid.appendChild(itemContainer)
     }
-    else if(itemBtn.dataset.id > 7){
+    else if(itemBtn.dataset.id > 8){
         topGrid.appendChild(itemContainer)
     }
 };
@@ -68,22 +68,7 @@ Array.from(shoesGrid.getElementsByTagName('button')).forEach( element => {
     })
 })
 
-// Shoes image view
-const popupWindow = document.querySelector('.image-window');
-const popupImg = document.querySelector('.image-window>img');
-Array.from(shoesGrid.getElementsByTagName('img')).forEach( function(img, index){
-    img.addEventListener('click', e=> {
-        document.body.style.overflow = 'hidden';
-        popupWindow.style.display = 'flex';
-        popupImg.src = `./images/men-shoe${index+1}.webp`;
-    })
-})
-Array.from(shoesContainer.getElementsByClassName('img-close')).forEach( button =>{
-    button.addEventListener('click', ()=> {
-        popupWindow.style.display = 'none';
-        document.body.style.overflow = 'initial';
-    })
-})
+
 
 // Top clothes data
 const topContainer = document.querySelector('.top-container');
@@ -109,5 +94,32 @@ Array.from(topGrid.getElementsByTagName('button')).forEach( element => {
         };
         localStorage.setItem(newItem.id, JSON.stringify(newItem));
         e.target.innerText = 'Added';
+    })
+})
+
+// Shoes image view
+const popupWindow = document.querySelector('.image-window');
+const popupImg = document.querySelector('.image-window>img');
+const imgContainer = document.querySelector('main');
+Array.from(imgContainer.getElementsByTagName('img')).forEach( function(img, index){
+    img.addEventListener('click', e=> {
+        document.body.style.overflow = 'hidden';
+        popupWindow.style.display = 'flex';
+        if(index < 9){
+            popupImg.src = `./images/men-shoe${index+1}.webp`;
+            
+        }
+        else if(index > 8 ){
+            console.log('hello')
+            popupImg.src = `./images/men-top${index-7}.webp`;
+            
+        }
+       
+    })
+})
+Array.from(document.getElementsByClassName('img-close')).forEach( button =>{
+    button.addEventListener('click', ()=> {
+        popupWindow.style.display = 'none';
+        document.body.style.overflow = 'initial';
     })
 })

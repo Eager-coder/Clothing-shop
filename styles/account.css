@@ -357,40 +357,6 @@ footer img:hover {
   margin: 10px 0;
 }
 
-.shoes .shoes-container .image-window {
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  position: fixed;
-  background-color: whitesmoke;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: none;
-}
-
-.shoes .shoes-container .image-window img {
-  width: 50%;
-}
-
-.shoes .shoes-container .image-window .img-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-}
-
-.shoes .shoes-container .image-window .img-close::after {
-  content: ' \2716';
-  font-size: 1.5rem;
-}
-
 .shoes-grid, .top-grid {
   display: -ms-grid;
   display: grid;
@@ -460,6 +426,41 @@ footer img:hover {
 .top .top-container h2 {
   font-size: 2.5rem;
   margin: 10px 0;
+}
+
+.image-window {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: fixed;
+  background-color: whitesmoke;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+  z-index: 1;
+}
+
+.image-window img {
+  width: 50%;
+}
+
+.image-window .img-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.image-window .img-close::after {
+  content: ' \2716';
+  font-size: 1.5rem;
 }
 
 .sign-up {

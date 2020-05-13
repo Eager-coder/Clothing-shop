@@ -274,32 +274,7 @@ footer{
             font-size: 2.5rem;
             margin: 10px 0;
         }
-        .image-window{
-            width: 100vw;
-            height: 100vh;
-            top: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-            position: fixed;
-            background-color: whitesmoke;
-            justify-content: center;
-            align-items: center;
-            display: none;
-            img{
-                width: 50%;
-            }
-            .img-close{
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                cursor: pointer;
-                &::after{
-                    content: ' \2716';
-                    font-size: 1.5rem;
-                }
-            }
-        }
+        
     }
 }
     .shoes-grid, .top-grid{
@@ -351,6 +326,33 @@ footer{
         }
     }
     
+}
+.image-window{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: fixed;
+    background-color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 1;
+    img{
+        width: 50%;
+    }
+    .img-close{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        &::after{
+            content: ' \2716';
+            font-size: 1.5rem;
+        }
+    }
 }
 .sign-up{
     margin: 100px 0;
