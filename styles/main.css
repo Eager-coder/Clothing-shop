@@ -357,6 +357,20 @@ footer img:hover {
   margin: 10px 0;
 }
 
+.shoes .image-window {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: whitesmoke;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
 .shoes .shoes-grid {
   display: -ms-grid;
   display: grid;

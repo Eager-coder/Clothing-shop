@@ -275,6 +275,15 @@ footer{
             margin: 10px 0;
         }
     }
+    .image-window{
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        background-color: whitesmoke;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
     .shoes-grid{
         display: grid;
         grid-template-columns: repeat(4, 1fr);

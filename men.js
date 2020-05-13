@@ -16,13 +16,13 @@ const shoe7 = new itemConstructor('DAME 6 SHOES', 59, './images/men-shoe7.webp',
 const shoe8 = new itemConstructor('DAME 6 SHOES', 59, './images/men-shoe8.webp', 8);
 // Shoes array
 const shoesArray = [shoe1, shoe2, shoe3, shoe4, shoe5, shoe6, shoe7, shoe8];
-localStorage.setItem('size', shoesArray.length)
+localStorage.setItem('size', shoesArray.length);
 shoesArray.forEach(element =>{
     let itemContainer = document.createElement('DIV');
-    itemContainer.classList.add('item-container')
+    itemContainer.classList.add('item-container');
     let itemName = document.createElement('SPAN');
     let itemPrice = document.createElement('SPAN');
-    itemPrice.classList.add('item-price')
+    itemPrice.classList.add('item-price');
     let itemImg = document.createElement('IMG');
     let itemInfo = document.createElement('DIV');
     itemInfo.classList.add('item-info');
@@ -52,8 +52,17 @@ Array.from(shoesGrid.getElementsByTagName('button')).forEach( element => {
             id: e.target.dataset.id
         };
         localStorage.setItem(newItem.id, JSON.stringify(newItem));
-        e.target.innerText = 'Added'
+        e.target.innerText = 'Added';
     })
 })
-
+ const popupWindow = document.querySelector('.image-window');
+ const popupImg = document.querySelector('.image-window>img');
+Array.from(shoesGrid.getElementsByTagName('img')).forEach(img =>{
+   
+    img.addEventListener('click', e=> {
+        popupWindow.style.top = '0'
+        popupWindow.style.display = 'flex';
+        popupImg.src = './images/men-shoe1.webp'
+    })
+})
 // Top 
