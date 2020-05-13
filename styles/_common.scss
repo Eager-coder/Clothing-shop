@@ -274,17 +274,35 @@ footer{
             font-size: 2.5rem;
             margin: 10px 0;
         }
+        .image-window{
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            position: fixed;
+            background-color: whitesmoke;
+            justify-content: center;
+            align-items: center;
+            display: none;
+            img{
+                width: 50%;
+            }
+            .img-close{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                cursor: pointer;
+                &::after{
+                    content: ' \2716';
+                    font-size: 1.5rem;
+                }
+            }
+        }
     }
-    .image-window{
-        width: 100vw;
-        height: 100vh;
-        position: fixed;
-        background-color: whitesmoke;
-        justify-content: center;
-        align-items: center;
-        display: none;
-    }
-    .shoes-grid{
+}
+    .shoes-grid, .top-grid{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         row-gap: 100px;
@@ -292,36 +310,34 @@ footer{
         @include tablet(){
             grid-template-columns: 1fr 1fr;
         }
-        .item-container{
-            display: flex;
-            flex-direction: column;
-            
-            
-            img{
-            width: 100%;
-            height: auto;
-                
-            }
-            .item-info{
-                display: flex;
-                justify-content: space-between;
-                margin: 10px 0;
-                .item-price{
-                    font-size: 1.2rem;
-                    font-weight: 600;
-                }
-            }
-            button{
-                align-self: end;
-                width: 100px;
-                height: 30px;
-                background-color: black;
-                color: white;
-                cursor: pointer;
-                border: none;
-                border-radius: 5px;
-            }
+        
+    }
+
+.item-container{
+    display: flex;
+    flex-direction: column;
+    img{
+    width: 100%;
+    height: auto; 
+    }
+    .item-info{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+        .item-price{
+            font-size: 1.2rem;
+            font-weight: 600;
         }
+    }
+    button{
+        align-self: end;
+        width: 100px;
+        height: 30px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
     }
 }
 .top{
@@ -334,28 +350,7 @@ footer{
             margin: 10px 0;
         }
     }
-    .top-grid{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: max-content;
-        row-gap: 20px;
-        column-gap: 20px;
-        @include tablet(){
-            grid-template-columns: 1fr 1fr;
-        }
-        .top-item{
-            display: flex;
-            flex-direction: column;
-            img{
-                width: 100%;
-                height: auto;
-            }
-            a{
-                color: rgb(71, 71, 71);
-                margin: 5px 0;
-            }
-        }
-    }
+    
 }
 .sign-up{
     margin: 100px 0;

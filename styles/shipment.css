@@ -357,9 +357,13 @@ footer img:hover {
   margin: 10px 0;
 }
 
-.shoes .image-window {
+.shoes .shoes-container .image-window {
   width: 100vw;
   height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
   position: fixed;
   background-color: whitesmoke;
   -webkit-box-pack: center;
@@ -371,7 +375,23 @@ footer img:hover {
   display: none;
 }
 
-.shoes .shoes-grid {
+.shoes .shoes-container .image-window img {
+  width: 50%;
+}
+
+.shoes .shoes-container .image-window .img-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.shoes .shoes-container .image-window .img-close::after {
+  content: ' \2716';
+  font-size: 1.5rem;
+}
+
+.shoes-grid, .top-grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
@@ -382,13 +402,13 @@ footer img:hover {
 }
 
 @media screen and (max-width: 770px) {
-  .shoes .shoes-grid {
+  .shoes-grid, .top-grid {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
 }
 
-.shoes .shoes-grid .item-container {
+.item-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -398,12 +418,12 @@ footer img:hover {
           flex-direction: column;
 }
 
-.shoes .shoes-grid .item-container img {
+.item-container img {
   width: 100%;
   height: auto;
 }
 
-.shoes .shoes-grid .item-container .item-info {
+.item-container .item-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -413,12 +433,12 @@ footer img:hover {
   margin: 10px 0;
 }
 
-.shoes .shoes-grid .item-container .item-info .item-price {
+.item-container .item-info .item-price {
   font-size: 1.2rem;
   font-weight: 600;
 }
 
-.shoes .shoes-grid .item-container button {
+.item-container button {
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
@@ -440,46 +460,6 @@ footer img:hover {
 .top .top-container h2 {
   font-size: 2.5rem;
   margin: 10px 0;
-}
-
-.top .top-grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: max-content;
-      grid-template-rows: -webkit-max-content;
-      grid-template-rows: max-content;
-  row-gap: 20px;
-  -webkit-column-gap: 20px;
-          column-gap: 20px;
-}
-
-@media screen and (max-width: 770px) {
-  .top .top-grid {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-  }
-}
-
-.top .top-grid .top-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.top .top-grid .top-item img {
-  width: 100%;
-  height: auto;
-}
-
-.top .top-grid .top-item a {
-  color: #474747;
-  margin: 5px 0;
 }
 
 .sign-up {
