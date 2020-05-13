@@ -33,7 +33,7 @@ const itemGenerator = function(element){
     if (itemBtn.dataset.id < 25){
         shoesGrid.appendChild(itemContainer)
     }
-    else if(itemBtn.dataset.id > 26){
+    else if(itemBtn.dataset.id > 24){
         topGrid.appendChild(itemContainer)
     }
 };
@@ -53,7 +53,7 @@ const shoesArray = [shoe1, shoe2, shoe3, shoe4, shoe5, shoe6, shoe7, shoe8];
 
 
 // Setting to localstorage
-localStorage.setItem('size', shoesArray.length);
+localStorage.setItem('size', 24);
 shoesArray.forEach(itemGenerator);
 Array.from(shoesGrid.getElementsByTagName('button')).forEach( element => {
     element.addEventListener('click', e => {
@@ -73,14 +73,14 @@ Array.from(shoesGrid.getElementsByTagName('button')).forEach( element => {
 // Top clothes data
 const topContainer = document.querySelector('.top-container');
 const topGrid = topContainer.querySelector('.top-grid');
-const top1 = new itemConstructor('Power Thermo', 39, './images/men-top1.webp', 9);
-const top2 = new itemConstructor('Power Thermo', 39, './images/men-top2.webp', 10);
-const top3 = new itemConstructor('Power Thermo', 49, './images/men-top3.webp', 11);
-const top4 = new itemConstructor('Power Thermo', 49, './images/men-top4.webp', 12);
-const top5 = new itemConstructor('Power Thermo', 59, './images/men-top5.webp', 13);
-const top6 = new itemConstructor('Power Thermo', 59, './images/men-top6.webp', 14);
-const top7 = new itemConstructor('Power Thermo', 69, './images/men-top7.webp', 15);
-const top8 = new itemConstructor('Power Thermo', 79, './images/men-top8.webp', 16);
+const top1 = new itemConstructor('Power Thermo', 39, './images/women-top1.webp', 25);
+const top2 = new itemConstructor('Power Thermo', 39, './images/women-top2.webp', 26);
+const top3 = new itemConstructor('Power Thermo', 49, './images/women-top3.webp', 27);
+const top4 = new itemConstructor('Power Thermo', 49, './images/women-top4.webp', 28);
+const top5 = new itemConstructor('Power Thermo', 59, './images/women-top5.webp', 29);
+const top6 = new itemConstructor('Power Thermo', 59, './images/women-top6.webp', 30);
+const top7 = new itemConstructor('Power Thermo', 69, './images/women-top7.webp', 31);
+const top8 = new itemConstructor('Power Thermo', 79, './images/women-top8.webp', 32);
 const topArray = [top1, top2, top3, top4, top5, top6, top7, top8];
 topArray.forEach(itemGenerator);
 // Setting to localstorage
@@ -105,13 +105,13 @@ Array.from(imgContainer.getElementsByTagName('img')).forEach( function(img, inde
     img.addEventListener('click', e=> {
         document.body.style.overflow = 'hidden';
         popupWindow.style.display = 'flex';
-        if(index < 9){
-            popupImg.src = `./images/men-shoe${index+1}.webp`;
+        if(index < 8){
+            popupImg.src = `./images/women-shoe${index+1}.webp`;
             
         }
-        else if(index > 8 ){
+        else if(index > 7 ){
             console.log('hello')
-            popupImg.src = `./images/men-top${index-7}.webp`;
+            popupImg.src = `./images/women-top${index-7}.webp`;
             
         }
        

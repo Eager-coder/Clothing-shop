@@ -53,7 +53,7 @@ const shoesArray = [shoe1, shoe2, shoe3, shoe4, shoe5, shoe6, shoe7, shoe8];
 
 
 // Setting to localstorage
-localStorage.setItem('size', shoesArray.length);
+localStorage.setItem('size', 24);
 shoesArray.forEach(itemGenerator);
 Array.from(shoesGrid.getElementsByTagName('button')).forEach( element => {
     element.addEventListener('click', e => {
@@ -105,11 +105,11 @@ Array.from(imgContainer.getElementsByTagName('img')).forEach( function(img, inde
     img.addEventListener('click', e=> {
         document.body.style.overflow = 'hidden';
         popupWindow.style.display = 'flex';
-        if(index < 9){
+        if(index < 8){
             popupImg.src = `./images/men-shoe${index+1}.webp`;
             
         }
-        else if(index > 8 ){
+        else if(index > 7){
             console.log('hello')
             popupImg.src = `./images/men-top${index-7}.webp`;
             
