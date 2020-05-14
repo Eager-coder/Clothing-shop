@@ -1,2 +1,2 @@
 # Clothing-shop
-This is a clothing shop made by me
+A simple ecommere website made by me
