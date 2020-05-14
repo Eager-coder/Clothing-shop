@@ -25,4 +25,20 @@ searchField.addEventListener('click', (e)=>{
     }
 })
 
+// Cart Icon
+
+const cartRedBall = document.getElementById('cart-red-ball');
+function showRedBall(){
+    if(localStorage.length > 1){
+        cartRedBall.style.display = 'flex';
+        cartRedBall.innerText = localStorage.length - 1;
+    }
+    else{
+        cartRedBall.style.display = 'none'
+    }
+}
+setInterval(showRedBall, 10)
+   
+    
+
 

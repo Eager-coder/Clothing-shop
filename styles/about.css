@@ -153,6 +153,29 @@ header nav .nav-buttons #menu-btn {
   }
 }
 
+header nav .nav-buttons #cart-btn {
+  position: relative;
+}
+
+header nav .nav-buttons #cart-btn #cart-red-ball {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  background-color: #ce0000;
+  top: -5;
+  right: -2px;
+  color: white;
+  font-size: 0.7rem;
+}
+
 header .nav-links-mobile {
   display: none;
   width: 100%;

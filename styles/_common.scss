@@ -118,6 +118,23 @@ header{
                     display: block;
                 }
             } 
+            #cart-btn{
+                position: relative;
+                #cart-red-ball{
+                    display: none;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 100%;
+                    background-color: rgb(206, 0, 0);
+                    top: -5;
+                    right: -2px;
+                    color: white;
+                    font-size: 0.7rem;
+                } 
+            }
         } 
     }
     .nav-links-mobile{

@@ -123,3 +123,4 @@ Array.from(document.getElementsByClassName('img-close')).forEach( button =>{
         document.body.style.overflow = 'initial';
     })
 })
+
