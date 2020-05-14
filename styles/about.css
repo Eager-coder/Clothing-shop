@@ -492,6 +492,12 @@ footer img:hover {
   background-color: #ede734;
 }
 
+@media screen and (max-width: 770px) {
+  .sign-up {
+    margin: 0 auto;
+  }
+}
+
 .sign-up .sign-up-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -806,7 +812,7 @@ main .figures {
 
 @media screen and (max-width: 770px) {
   main .figures {
-    margin: 100px auto;
+    margin: 30px auto;
   }
 }
 
@@ -864,6 +870,12 @@ main .figures .figures-flex h3 {
   font-size: 3.5rem;
   font-weight: 900;
   color: #353535;
+}
+
+@media screen and (max-width: 480px) {
+  main .figures .figures-flex h3 {
+    font-size: 3rem;
+  }
 }
 
 main .figures .figures-flex span {

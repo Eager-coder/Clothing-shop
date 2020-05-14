@@ -492,6 +492,12 @@ footer img:hover {
   background-color: #ede734;
 }
 
+@media screen and (max-width: 770px) {
+  .sign-up {
+    margin: 0 auto;
+  }
+}
+
 .sign-up .sign-up-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -669,7 +675,17 @@ footer img:hover {
 }
 
 .trending {
-  margin: 150px 0;
+  position: relative;
+  margin: 150px auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+@media screen and (max-width: 770px) {
+  .trending {
+    margin: 50px auto;
+  }
 }
 
 .trending h4 {
@@ -695,29 +711,14 @@ footer img:hover {
 .trending .carousel {
   width: 80vw;
   margin: 0 auto;
-  overflow-x: scroll;
+  overflow-x: hidden;
   scroll-behavior: smooth;
-  scrollbar-width: thin;
-  scrollbar-color: black whitesmoke;
-}
-
-.trending .carousel::-webkit-scrollbar {
-  width: 12px;
-}
-
-.trending .carousel::-webkit-scrollbar-track {
-  background: whitesmoke;
-}
-
-.trending .carousel::-webkit-scrollbar-thumb {
-  background-color: black;
-  border-radius: 20px;
-  border: 3px solid whitesmoke;
 }
 
 @media screen and (max-width: 770px) {
   .trending .carousel {
     width: 100vw;
+    overflow-x: scroll;
   }
 }
 
@@ -728,9 +729,7 @@ footer img:hover {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  -webkit-transition: 1s;
-  transition: 1s;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .trending .carousel .carousel-container .product {
@@ -755,6 +754,30 @@ footer img:hover {
   display: block;
   text-transform: uppercase;
   color: black;
+}
+
+.trending .chevron {
+  cursor: pointer;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 50%;
+}
+
+@media screen and (max-width: 770px) {
+  .trending .chevron {
+    display: none;
+  }
+}
+
+.trending .prev {
+  left: -80px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.trending .next {
+  right: -80px;
 }
 
 .features-container .features-content {

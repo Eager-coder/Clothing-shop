@@ -3,6 +3,9 @@ main{
     h1{
         margin-bottom: 30px;
         font-size: 3.5rem;
+        @include tablet(){
+            font-size: 2rem;
+        }
     }
     padding: 0 30px;
     width: 100%;
@@ -57,25 +60,36 @@ main{
     }
     .pro-tips{
         margin: 100px auto;
-
+        @include tablet(){
+            margin: 30px auto;
+        }
         .tips-container{
             width: 100%;
             margin: 0 auto;
-            
             display: flex;
             justify-content: space-between;
+            @include tablet(){
+                flex-direction: column;
+            }
             .tip{
                 width: 30vw;
                 height: max-content;
                 margin: 0 5px;
+                @include tablet(){
+                    margin-bottom: 50px;
+                    width: 100%;   
+                }
                 img{
                     width: 100%;
-                    height: 25vw;
+                    height: 30vw;
                     object-fit: cover;
                     object-position: top;
                     transition: 0.3s;
                     &:hover{
                         transform: scale(1.02);
+                    }
+                    @include tablet(){
+                        height: 40vh;
                     }
                 }
                 .tag{

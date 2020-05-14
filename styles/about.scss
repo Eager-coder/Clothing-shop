@@ -10,7 +10,6 @@
         opacity: 0.4;
         @include mobile (){
             object-position: 80%;
-
         }
     }
     .mission-text{
@@ -150,7 +149,7 @@ main{
         margin: 200px auto;
         padding: 0 20px;
         @include tablet(){
-            margin: 100px auto;
+            margin: 30px auto;
         }
         h2{
             font-size: 3rem;
@@ -171,8 +170,7 @@ main{
             .figure{
                 margin-bottom: 30px;
                 .figure-text{
-                    width: 200px;
-
+                    width: 200px;   
                 }
                 @include laptop(){
                     width: 50%;
@@ -185,6 +183,9 @@ main{
                 font-size: 3.5rem;
                 font-weight: 900;
                 color: rgb(53, 53, 53);
+                @include mobile(){
+                    font-size: 3rem;
+                }
             }
             span{
                 font-size: 1.5rem;

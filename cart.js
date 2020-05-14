@@ -26,9 +26,15 @@ for ( let i = 1; i < localStorage.getItem('size')+1; i++){
         itemBtn.innerText = '';
     }
 }
-if(localStorage.length === 0){
-    emptyCart.style.display = "block"
+function removeEmptyCart(){
+    if(localStorage.length <= 1){
+        emptyCart.style.display = "block"
+    }
+    else if(localStorage.length > 1) {
+        emptyCart.style.display = "none"
+    }
 }
+setInterval(removeEmptyCart, 100);
 Array.from(document.querySelectorAll('.item-button')).forEach(function(elem){
     elem.addEventListener('click', e =>{   
         e.target.parentElement.remove();

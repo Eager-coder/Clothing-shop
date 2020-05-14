@@ -492,6 +492,12 @@ footer img:hover {
   background-color: #ede734;
 }
 
+@media screen and (max-width: 770px) {
+  .sign-up {
+    margin: 0 auto;
+  }
+}
+
 .sign-up .sign-up-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -620,7 +626,8 @@ main .login-container {
 }
 
 main .login-container input {
-  width: 500px;
+  max-width: 500px;
+  width: 80%;
   height: 40px;
   margin-bottom: 40px;
   border-radius: 2px;

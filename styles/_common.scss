@@ -374,6 +374,9 @@ footer{
 .sign-up{
     margin: 100px 0;
     padding: 50px 0;
+    @include tablet(){
+        margin: 0 auto;
+    }
     background-color: #ede734;
     .sign-up-flex{
         display: flex;
