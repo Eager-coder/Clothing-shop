@@ -55,18 +55,7 @@ const shoesArray = [shoe1, shoe2, shoe3, shoe4, shoe5, shoe6, shoe7, shoe8];
 // Setting to localstorage
 localStorage.setItem('size', 24);
 shoesArray.forEach(itemGenerator);
-Array.from(shoesGrid.getElementsByTagName('button')).forEach( element => {
-    element.addEventListener('click', e => {
-        let newItem = {
-            name: e.target.dataset.name,
-            price: e.target.dataset.price,
-            img: e.target.dataset.img,
-            id: e.target.dataset.id
-        };
-        localStorage.setItem(newItem.id, JSON.stringify(newItem));
-        e.target.innerText = 'Added';
-    })
-})
+
 
 
 
@@ -94,6 +83,10 @@ Array.from(topGrid.getElementsByTagName('button')).forEach( element => {
         };
         localStorage.setItem(newItem.id, JSON.stringify(newItem));
         e.target.innerText = 'Added';
+        addedImg.src = newItem.img;
+        addedName.innerText = newItem.name;
+        addedPrice.innerText = "$"+newItem.price;
+        setTimeout(showAddedItem, 300);
     })
 })
 
@@ -123,4 +116,38 @@ Array.from(document.getElementsByClassName('img-close')).forEach( button =>{
         document.body.style.overflow = 'initial';
     })
 })
+//
+const addedItem = document.querySelector('.added');
+const addedImg = document.querySelector('.added-img');
+const addedName = document.querySelector('.added-name');
+const addedPrice = document.querySelector('.added-price');
+Array.from(shoesGrid.getElementsByTagName('button')).forEach( element => {
+    element.addEventListener('click', e => {
+        let newItem = {
+            name: e.target.dataset.name,
+            price: e.target.dataset.price,
+            img: e.target.dataset.img,
+            id: e.target.dataset.id
+        };
+        localStorage.setItem(newItem.id, JSON.stringify(newItem));
+        e.target.innerText = 'Added';
+        addedImg.src = newItem.img;
+        addedName.innerText = newItem.name;
+        addedPrice.innerText = "$"+newItem.price;
+        setTimeout(showAddedItem, 300);
+    })
+})
+function showAddedItem(){
+    addedItem.style.display = 'flex';
+    document.body.style.overflowY = 'hidden';
+    document.querySelector('.dark-page').classList.add('dark-page-active')
+};
+document.getElementById('close-added-btn').addEventListener('click', hideAddedItem );
+document.getElementById('continue-btn').addEventListener('click', hideAddedItem);
 
+
+function hideAddedItem(){
+    addedItem.style.display = 'none';
+    document.body.style.overflowY = 'scroll';
+    document.querySelector('.dark-page').classList.remove('dark-page-active')
+}
