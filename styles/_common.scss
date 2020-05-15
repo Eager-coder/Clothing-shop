@@ -451,7 +451,7 @@ footer{
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 500px;
+    width: 480px;
     height: 350px;
     background-color: white;
     position: fixed;
@@ -459,10 +459,20 @@ footer{
     top: 100px;
     right: 20px;
     padding: 20px;
+    @include mobile(){
+        width: 100vw;
+        height: 100vh;
+        top: 0; right: 0; bottom: 0; left: 0;
+        padding: 150px 20px;
+        justify-content: unset;
+    }
     .top{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include mobile(){
+            margin-bottom: 20px;
+        }
         h4{
             display: flex;
             align-items: center;
@@ -493,6 +503,9 @@ footer{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include mobile(){
+            margin-top: 20px;
+        }
         div{
             width: 200px;
             height: 50px;
@@ -502,6 +515,7 @@ footer{
             align-items: center;
         }
         div:nth-child(1){
+            margin-right:20px ;
             border: rgba(0, 0, 0, 0.219) 2px solid ;
             transition: 0.3s;
             &:hover{

@@ -609,7 +609,7 @@ footer img:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 500px;
+  width: 480px;
   height: 350px;
   background-color: white;
   position: fixed;
@@ -617,6 +617,21 @@ footer img:hover {
   top: 100px;
   right: 20px;
   padding: 20px;
+}
+
+@media screen and (max-width: 480px) {
+  .added {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 150px 20px;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
 }
 
 .added .top {
@@ -629,6 +644,12 @@ footer img:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+  .added .top {
+    margin-bottom: 20px;
+  }
 }
 
 .added .top h4 {
@@ -681,6 +702,12 @@ footer img:hover {
           align-items: center;
 }
 
+@media screen and (max-width: 480px) {
+  .added .buttons {
+    margin-top: 20px;
+  }
+}
+
 .added .buttons div {
   width: 200px;
   height: 50px;
@@ -697,6 +724,7 @@ footer img:hover {
 }
 
 .added .buttons div:nth-child(1) {
+  margin-right: 20px;
   border: rgba(0, 0, 0, 0.219) 2px solid;
   -webkit-transition: 0.3s;
   transition: 0.3s;
