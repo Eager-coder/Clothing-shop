@@ -474,6 +474,12 @@ footer img:hover {
   width: 50%;
 }
 
+@media screen and (max-width: 770px) {
+  .image-window img {
+    width: 100%;
+  }
+}
+
 .image-window .img-close {
   position: absolute;
   top: 10px;

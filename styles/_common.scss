@@ -359,6 +359,9 @@ footer{
     z-index: 1;
     img{
         width: 50%;
+        @include tablet(){
+            width: 100%
+        }
     }
     .img-close{
         position: absolute;
