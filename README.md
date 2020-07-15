@@ -1,4 +1,4 @@
 # Clothing-shop
 A simple ecommere website made by me
 
-See live => vertex-wear.netlify.app
+See live => https://vertex-wear.netlify.app/
